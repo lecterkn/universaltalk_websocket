@@ -1,8 +1,15 @@
 [package]
-name = "universalktalk_webhook"
+name = "universaltalk_webhook"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
 tokio = { version = "1.40.0", features = ["full"] }
-redis = "0.27.4"
+tokio-tungstenite = "*"
+futures = "0.3"
+redis = { version = "0.27.4", features = ["async-std-comp"] }
+jsonwebtoken = "9"
+serde = {version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+uuid = { version = "1.0", features = ["serde", "v4"] }
+dotenvy = "0.15.7"
